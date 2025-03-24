@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>feedback-form/</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Customer Feedback Form</h1>
+    <p id="description">We appreciate your feedback to enhance our services</p>
+    <form id="survey-form" method="post" action='https://feedback.example.com'>
+        <label id="name-label" for="name">Full Name 
+          <input id="name" name="name" type="text" placeholder="Enter your full name" required />
+          </label>
+        <label id="email-label" for="email">Email Address
+          <input id="email" name="email" type="email" placeholder="Enter your email address" required /></label>
+        <label id="number-label" for="number">Age (optional)
+          <input id="number" name="age" type="number" min="1" max="99" placeholder="Your age" /></label>
+
+          <label for="dropdown">What best describes your experience with us?
+          <select id="dropdown" name="dropdown">
+            <option value="">Select an option</option>
+            <option value="1">Excellent</option>
+            <option value="2">Good</option>
+            <option value="3">Average</option>
+            <option value="4">Poor</option>
+            <option value="5">Terrible</option>
+          </select>
+        </label> 
+
+  <legend>Would you recommend our service to others?</legend>
+        <label for="definitely-recommend">
+          <input id="definitely-recommend" type="radio" name="recommend-type" value="definitely" class="inline1" checked /> Definitely</label>
+        <label for="maybe-recommend">
+          <input id="maybe-recommend" type="radio" name="recommend-type" class="inline1" value="maybe" /> Maybe</label>
+         <label for="notsure-recommend">
+           <input id="notsure-recommend" type="radio" name="recommend-type" class="inline1" value="notsure" /> Not sure</label>
+
+          <label for="dropdown">What was the best part of your experience?
+          <select id="dropdown" name="dropdown">
+            <option value="">Select an option</option>
+            <option value="1">Customer Service</option>
+            <option value="2">Product Quality</option>
+            <option value="3">Pricing</option>
+            <option value="4">Ease of Use</option>
+          </select>
+        </label> 
+
+ <fieldset>
+  <legend>What areas do you think need improvement? (Check all that apply)</legend>
+
+  <label class="checkbox-label">
+    <input class="checkbox" type="checkbox" value="website" name="improvements">
+    Website Navigation
+  </label>
+
+  <label class="checkbox-label">
+    <input class="checkbox" type="checkbox" value="support" name="improvements">
+    Customer Support
+  </label>
+
+  <label class="checkbox-label">
+    <input class="checkbox" type="checkbox" value="delivery" name="improvements">
+    Delivery Speed
+  </label>
+
+  <label class="checkbox-label">
+    <input class="checkbox" type="checkbox" value="pricing" name="improvements">
+    Pricing Options
+  </label>
+
+  <label class="checkbox-label">
+    <input class="checkbox" type="checkbox" value="product_quality" name="improvements">
+    Product Quality
+  </label>
+</fieldset>
+
+    <label class="label-textarea" for="bio">Additional comments or suggestions?
+          <textarea id="bio" name="bio" rows="5" cols="30" placeholder="Your feedback here..."></textarea>
+       </label>
+
+      <input id="submit" type="submit" value="Submit Feedback" />
+      
+    </form>
+  </body>
+</html>
